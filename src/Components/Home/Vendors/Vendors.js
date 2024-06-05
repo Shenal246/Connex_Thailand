@@ -7,6 +7,7 @@ import 'swiper/css/navigation';
 import { EffectCoverflow, Autoplay } from 'swiper/modules';
 import 'swiper/swiper-bundle.css'; // Import Swiper bundle CSS
 
+
 import './Vendors.css';
 
 // Import your image files
