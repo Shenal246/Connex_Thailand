@@ -17,7 +17,7 @@ const Footer = () => {
                             </p>
                         </div>
                         <div className="col-md-6 col-lg-4  ft-1 address2">
-                            <h3>Sri Lankan Office</h3>
+                            <h3>Thailand Office</h3>
                             <p className='txt'> <i className="fas fa-map-marker-alt img2" ></i>
                                 No 286,<br />
                                 <span>R. A. De Mel Mawatha,</span><br />
