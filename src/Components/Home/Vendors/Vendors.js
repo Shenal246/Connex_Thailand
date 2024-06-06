@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { EffectCoverflow, Autoplay } from 'swiper/modules';
 import 'swiper/swiper-bundle.css'; // Import Swiper bundle CSS
-
+import { useTranslation } from 'react-i18next';
 
 import './Vendors.css';
 
@@ -30,13 +30,16 @@ import ven14 from '../../../images/vendorLogos/14.png';
 const imagePaths = [ven1, ven2, ven3, ven4, ven5, ven6, ven7, ven8, ven9, ven10, ven11, ven12, ven13, ven14]; // Add all your image paths to this array
 
 const Vendors = () => {
+  const { t } = useTranslation();
+const { ventopic, venText1, venText2 } = t('vendorsec', { returnObjects: true });
+
   return (
     <section className='vendors'>
       <div className='container'>
         {/* Vendors Text */}
         <div className="row gy-3" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
           <div className="col-4"><hr /></div>
-          <div className="col-4"><p id='ourVendorsText'>Our Vendors</p></div>
+          <div className="col-4"><p id='ourVendorsText'>{ventopic}</p></div>
           <div className="col-4"><hr /></div>
         </div>
 

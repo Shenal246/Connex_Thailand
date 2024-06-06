@@ -2,6 +2,7 @@ import './Hero.css';
 import Logo from '../../../images/hero.png';
 import React, { useRef, useEffect } from 'react';
 import { NavLink } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 function HeroSection() {
   const iframeRef = useRef(null); // Create a ref for the iframe element
@@ -31,22 +32,27 @@ function HeroSection() {
     };
   }, []);
 
+  const { t } = useTranslation();
+
+  const { greet1, greet2first,greet2mid,greet2last,greet3,contact,wtvideo } = t('herosect', { returnObjects: true });
+  const { line1, line2 } = t('description', { returnObjects: true });
+
   return (
     <section id="hero" className="section hero">
       <div className="container">
         <div className="row gy-4">
           <div className="col-lg-8 order-2 order-lg-1 d-flex flex-column justify-content-center cont" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
-            <h3 className='settop'>Leading Technology Distributor</h3>
-            <h1>Welcome to <span className='Connexcon'>Con</span><span className='Connexnex'>nex</span> Information Technologies</h1>
-            <p>Value added distributor for more than 30 leading global vendors.</p>
+            <h3 className='settop'>{greet1}</h3>
+            <h1>{greet2first}<span className='Connexcon'>{greet2mid}</span>{greet2last}</h1>
+            <p>{greet3}</p>
 
             <div className="row gy-4">
               <div className="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
                 <div className="d-flex">
-                  <NavLink to="/ContactUs" className="btn-get-started">Contact Us</NavLink>
+                  <NavLink to="/ContactUs" className="btn-get-started">{contact}</NavLink>
                   <a href="#" className="glightbox btn-watch-video d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#videoModal" onClick={handlePlayVideo}>
                     <i className="bi bi-play-circle"></i>
-                    <span>Watch Video</span>
+                    <span>{wtvideo}</span>
                   </a>
                 </div>
               </div>

@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import CountUp from 'react-countup';
 import ScrollTrigger from 'react-scroll-trigger';
 import { NavLink } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 import Dis from '../../../images/tech/Distributer.png';
 import Con from '../../../images/tech/Consultancy.png';
@@ -31,16 +32,19 @@ function WhoweareSection() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const { t } = useTranslation();
+
   const [counterOn, setCounterOn] = useState(false);
+  const { whotopic, card1, card2, card3, card4, rText1, rText2, ic1, ic2, ic3, ic4 } = t('whowearesec', { returnObjects: true });
+
 
   return (
     <section id="about" className="section about">
       <div className="container conwh">
-
         <div>
           <div className="row whotextRow" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
             <div className="col-4"><hr /></div>
-            <div className="col-4"><p id='whoweareText'>Who we are</p></div>
+            <div className="col-4"><p id='whoweareText'>{whotopic}</p></div>
             <div className="col-4"><hr /></div>
           </div>
 
@@ -50,22 +54,22 @@ function WhoweareSection() {
                 <div className='row' data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
                   <div className='col welogos' onClick={() => setDisShow(true)}>
                     <div className='row'><img src={Dis} className='techimage' /></div>
-                    <div className='row'><p className='techText'>Distribution</p></div>
+                    <div className='row'><p className='techText'>{card1}</p></div>
                   </div>
                   <div className='col welogos' onClick={() => setConShow(true)}>
                     <div className='row'><img src={Con} className='techimage' /></div>
-                    <div className='row'><p className='techText'>Consultancy</p></div>
+                    <div className='row'><p className='techText'>{card2}</p></div>
                   </div>
                 </div>
 
                 <div className='row' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
                   <div className='col welogos' onClick={() => setTraShow(true)}>
                     <div className='row'><img src={Tra} className='techimage' /></div>
-                    <div className='row'><p className='techText'>Training</p></div>
+                    <div className='row'><p className='techText'>{card3}</p></div>
                   </div>
                   <div className='col welogos' onClick={() => setTacShow(true)}>
                     <div className='row'><img src={Tac} className='techimage' /></div>
-                    <div className='row'><p className='techText'>TAC Support</p></div>
+                    <div className='row'><p className='techText'>{card4}</p></div>
                   </div>
                 </div>
               </div>
@@ -74,8 +78,8 @@ function WhoweareSection() {
               <div className="col-md-6 d-flex flex-column justify-content-center textarea" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
 
                 <div className="row" id='whText'>
-                  <h3 className='h3'>A decade of expertise in cutting-edge technology distribution</h3>
-                  <p >A leading technology distributor thrives on adapting to the ever-changing world. If you require diverse solutions to achieve compliance and transform your business, your search ends here.</p>
+                  <h3 className='h3'>{rText1}</h3>
+                  <p >{rText2}</p>
                 </div>
 
 
@@ -88,7 +92,7 @@ function WhoweareSection() {
                       </div>
                     </div>
                     <div className='row textRow'>
-                      <p className='iconText'>{counterOn && <CountUp start={0} end={2014} duration={2} delay={0.5} separator="" />}<br /> Founded</p>
+                      <p className='iconText'>{counterOn && <CountUp start={0} end={2014} duration={2} delay={0.5} separator="" />}<br /> {ic1}</p>
                     </div>
                   </div>
 
@@ -99,7 +103,7 @@ function WhoweareSection() {
                       </div>
                     </div>
                     <div className='row textRow'>
-                      <p className='iconText'>{counterOn && <CountUp start={0} end={200} duration={3} delay={0.5} />}+ <br />Employees</p>
+                      <p className='iconText'>{counterOn && <CountUp start={0} end={200} duration={3} delay={0.5} />}+ <br />{ic2}</p>
                     </div>
                   </div>
 
@@ -110,7 +114,7 @@ function WhoweareSection() {
                       </div>
                     </div>
                     <div className='row textRow'>
-                      <p className='iconText'>{counterOn && <CountUp start={0} end={60} duration={3} delay={0.5} />}+ <br />Vendors</p>
+                      <p className='iconText'>{counterOn && <CountUp start={0} end={60} duration={3} delay={0.5} />}+ <br />{ic3}</p>
                     </div>
                   </div>
 
@@ -121,7 +125,7 @@ function WhoweareSection() {
                       </div>
                     </div>
                     <div className='row textRow'>
-                      <p className='iconText'>{counterOn && <CountUp start={0} end={150} duration={3} delay={0.5} />}+ <br />Partners</p>
+                      <p className='iconText'>{counterOn && <CountUp start={0} end={150} duration={3} delay={0.5} />}+ <br />{ic4}</p>
                     </div>
                   </div>
 

@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'aos/dist/aos.css'; // Import AOS CSS
+import './i18n';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

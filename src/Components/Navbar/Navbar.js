@@ -35,6 +35,7 @@ import tnz from '../../images/FlagIcon/tanzania.png';
 import tld from '../../images/FlagIcon/thailand.png';
 
 import products from '../Products/products';
+import LanguageSelector from '../language-selector';
 
 
 function Navbar() {
@@ -170,6 +171,7 @@ function Navbar() {
             </nav>
 
             <NavLink to="/ContactUs" activeClassName='active-link' className="btn-getstarted" >Contact Us</NavLink>
+            <LanguageSelector/>
 
           </div>
         </header>
