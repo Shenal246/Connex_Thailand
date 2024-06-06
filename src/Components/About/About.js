@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import 'animate.css';
 import card1 from '../../images/map/map trans.png';
+import { useTranslation } from 'react-i18next';
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -33,59 +34,67 @@ function SamplePrevArrow(props) {
 }
 
 const About = () => {
+
+    const { t } = useTranslation();
+
+    const { ourSTopic, ourSText, ourVTopic, ourVText, ourMTopic, ourMText, sureshName, sureshText, shamalName, shamalText, dilshanName, dilshanText, rohanName, rohanText, rajivName,
+        rajivText, patricName, patricText, erangaName, erangaText, jananiName, jananiText, romeshName, romeshText
+    } = t('ourstory', { returnObjects: true });
+
+
     const data = [
         {
-            name: 'Suresh Wijesinghe',
+            name: sureshName,
             img: '/quots/Suresh.jpg',
-            quote: '"Leadership is not just about making decisions; it\s about inspiring others to achieve greatness."',
+            quote: sureshText,
             post: 'Founder / CEO',
         },
         {
-            name: 'Shamal Aberathne',
+            name: shamalName,
             img: '/quots/Shamal.jpg',
-            quote: '"In a world of noise, our brand\'s voice must be authentic, engaging, and memorable."',
+            quote: shamalText,
             post: 'CMO',
         },
         {
-            name: 'Dilshan De Silva',
+            name: dilshanName,
             img: '/quots/Dilshan_Silva.jpg',
-            quote: '"Operational excellence is the foundation of our success, driving efficiency and innovation."',
+            quote: dilshanText,
             post: 'COO',
         },
         {
-            name: 'Rohan Samaraweera',
+            name: rohanName,
             img: '/quots/Rohan.jpg',
-            quote: '"Technology transforms vision into reality, powering our journey into the future."',
+            quote: rohanText,
             post: 'CTO',
         },
         {
-            name: 'Rajiv Senawirathne',
+            name: rajivName,
             img: '/quots/Rajiv.jpg',
-            quote: '"Customer trust and satisfaction are the cornerstones of our company\'s reputation."',
+            quote: rajivText,
             post: 'Director of Connex HQ',
         },
         {
-            name: 'Patric Yogarathnam',
+            name: patricName,
             img: '/quots/Patrick_yogarathnam.jpg',
-            quote: '"Connecting with our global customers requires understanding diverse needs and delivering exceptional service."',
+            quote: patricText,
             post: 'CIR',
         },
         {
-            name: 'Eranga Wickramasinghe',
+            name: erangaName,
             img: '/quots/Eranga.jpg',
-            quote: '"Building strong relationships with our customers is the cornerstone of our success and growth."',
+            quote: erangaText,
             post: 'CRO',
         },
         {
-            name: 'Janani Siriwardhane',
+            name: jananiName,
             img: '/quots/Janani_Siriardhane.jpg',
-            quote: '"Empowering employees and fostering a positive culture are the keys to organizational success."',
+            quote: jananiText,
             post: 'Director of Connex HQ',
         },
         {
-            name: 'Romesh De Silva',
+            name: romeshName,
             img: '/quots/romesh.jpg',
-            quote: '"Success in sales is not about pushing products, but about understanding and solving customer needs."',
+            quote: romeshText,
             post: 'Director of Connex HQ',
         }
 
@@ -101,6 +110,7 @@ const About = () => {
         autoplay: true,
         autoplaySpeed: 5000,
     };
+
     return (
         <>
             <section id='t1'>
@@ -108,13 +118,13 @@ const About = () => {
                     <div className='center' data-aos="fade-up" data-aos-delay="200">
                         <div className='row'>
                             <div className='col-md-6'>
-                            <img src={headlogo} className='headimg'></img>
+                                <img src={headlogo} className='headimg'></img>
                             </div>
 
                             <div className='col-md-6 para'>
-                            <div className='story'>
-                                    <h1 className='topic'>Our Story</h1>
-                                    <p><br/>"Founded with a passion for technology and excellence,<br/><span className='storyCNX'> CONNEX INFORMATION TECHNOLOGY</span>  has become a leader in IT product distribution. We started with a vision to revolutionize the industry through innovative solutions and unparalleled support. Our success is built on strong relationships with our clients and partners, enabling us to adapt and meet dynamic market needs. As we grow, we remain committed to innovation, integrity, and partnership, driving mutual growth and setting new benchmarks in the industry."</p>
+                                <div className='story'>
+                                    <h1 className='topic'>{ourSTopic}</h1>
+                                    <p><br />{ourSText}</p>
                                 </div>
                             </div>
                         </div>
@@ -122,17 +132,16 @@ const About = () => {
 
                         <div className='row'>
                             <div className='col-md-6 content'>
-                            <div className='story bdround bdround1'>
-                                    <h1 className='topic'>Our Vision</h1>
-                                    <p><br/>"Our mission is to deliver high-quality IT products and solutions through our extensive network of partners. We are committed to providing exceptional service, innovative marketing, and dedicated support to ensure the success of our partners and the satisfaction of our customers, driving sustained growth and technological advancement."</p>
+                                <div className='story bdround bdround1'>
+                                    <h1 className='topic'>{ourVTopic}</h1>
+                                    <p><br />{ourVText}</p>
                                 </div>
                             </div>
 
                             <div className='col-md-6'>
-                            <div className='story bdround bdround2'>
-                                    <h1 className='topic'>Our Mission</h1>
-                                    <p><br/>"Our mission is to deliver high-quality IT products and solutions by leveraging our extensive network of partners and channels. We are committed to providing exceptional service, innovative marketing, and dedicated support to ensure the success of our partners and the satisfaction of our customers. Together, we strive to build a technologically advanced future and achieve sustained growth."
-</p>
+                                <div className='story bdround bdround2'>
+                                    <h1 className='topic'>{ourMTopic}</h1>
+                                    <p><br />{ourMText}</p>
                                 </div>
                             </div>
                         </div>
@@ -193,10 +202,10 @@ const About = () => {
 
                 </div> */}
 
-<div className='row imageMap'>
+            <div className='row imageMap'>
                 <div className="row gy-3 text">
                     <div className="col-2" ></div>
-                    <div className="col-8" > <img src={card1} className="map rounded-5 opacity-75 " alt="ConnexIT Logo"  /></div>
+                    <div className="col-8" > <img src={card1} className="map rounded-5 opacity-75 " alt="ConnexIT Logo" /></div>
                     <div className="col-2" ></div>
                 </div>
             </div>

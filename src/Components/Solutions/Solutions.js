@@ -8,8 +8,13 @@ import networking from '../../images/pillers/networking.jpg';
 import Perimie from '../../images/pillers/Perimie.jpg';
 import servers from '../../images/pillers/severBackup.jpg';
 import { NavLink } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 function Solutions() {
+  const { t } = useTranslation();
+  const { periTopic, cyberTopic, authTopic, secTopic, endTopic, netTopic, dataTopic, serverTopic } = t('solutionssec', { returnObjects: true });
+
+
   return (
     <section id='hero' className='hero1'>
       <div className="container text-center">
@@ -26,7 +31,7 @@ function Solutions() {
               <div className="card crd">
                 <img src={Perimie} className="card-img-top " alt="Perimeter and Internal Security" />
                 <div className="card-body cardSize">
-                  <p className="card-text txts">Perimeter and <br/> Internal Security</p>
+                  <p className="card-text txts">{periTopic}</p>
                 </div>
               </div>
             </NavLink>
@@ -36,7 +41,7 @@ function Solutions() {
               <div className="card crd">
                 <img src={cyber} className="card-img-top" alt="Cyber Security Governance & Compliance" />
                 <div className="card-body cardSize">
-                  <p className="card-text txts">Cyber Security Governance <br/>  & Compliance</p>
+                  <p className="card-text txts">{cyberTopic}</p>
                 </div>
               </div>
             </NavLink>
@@ -46,7 +51,7 @@ function Solutions() {
               <div className="card crd">
                 <img src={Authitianit} className="card-img-top" alt="Authentication & Identity Management" />
                 <div className="card-body cardSize">
-                  <p className="card-text txts">Authentication & Identity Management</p>
+                  <p className="card-text txts">{authTopic}</p>
                 </div>
               </div>
             </NavLink>
@@ -56,7 +61,7 @@ function Solutions() {
               <div className="card crd">
                 <img src={Security} className="card-img-top" alt="Security Management" />
                 <div className="card-body cardSize">
-                  <p className="card-text txts">Security <br/>  Management</p>
+                  <p className="card-text txts">{secTopic}</p>
                 </div>
               </div>
             </NavLink>
@@ -66,7 +71,7 @@ function Solutions() {
               <div className="card crd">
                 <img src={datapoint} className="card-img-top" alt="Endpoint Security" />
                 <div className="card-body cardSize">
-                  <p className="card-text txts">Endpoint <br/>  Security</p>
+                  <p className="card-text txts">{endTopic}</p>
                 </div>
               </div>
             </NavLink>
@@ -76,7 +81,7 @@ function Solutions() {
               <div className="card crd">
                 <img src={networking} className="card-img-top" alt="Networking" />
                 <div className="card-body cardSize">
-                  <p className="card-text txts">Networking</p>
+                  <p className="card-text txts">{netTopic}</p>
                 </div>
               </div>
             </NavLink>
@@ -86,7 +91,7 @@ function Solutions() {
               <div className="card crd ">
                 <img src={endpoint} className="card-img-top datacenter" alt="Data Center Infrastructure and Infrastructure Monitoring" />
                 <div className="card-body cardSize">
-                  <p className="card-text txts">Data Center Infrastructure and  Monitoring</p>
+                  <p className="card-text txts">{dataTopic}</p>
                 </div>
               </div>
             </NavLink>
@@ -96,17 +101,17 @@ function Solutions() {
               <div className="card crd ">
                 <img src={servers} className="card-img-top" alt="Server Storage & Backup Solutions" />
                 <div className="card-body cardSize">
-                  <p className="card-text txts">Server Storage & Backup Solutions</p>
+                  <p className="card-text txts">{serverTopic}</p>
                 </div>
               </div>
             </NavLink>
           </div>
         </div>
       </div>
-      
+
 
     </section>
-    
+
   );
 }
 

@@ -3,6 +3,7 @@ import './Chat.css';
 import ChatBot from 'react-simple-chatbot';
 import Botpic from '../../images/chatprof.png';
 import axios from "axios";
+import { useTranslation } from 'react-i18next';
 
 function Chat() {
   const [responses, setResponses] = useState([]);
@@ -11,17 +12,17 @@ function Chat() {
   const handleEnd = async ({ values }) => {
     console.log(values);
 
-    const name= values[0];
-     const problem= values[1];
-     const tpno= values[2];
-   
+    const name = values[0];
+    const problem = values[1];
+    const tpno = values[2];
+
     const value3 = {
       query: "INSERT INTO chat(name, problem, tpno) VALUES (?,?,?)",
-      value1:name,
-      value2:problem,
-      value3:tpno,
+      value1: name,
+      value2: problem,
+      value3: tpno,
       key: "FKoaDwCi7C"
-  };
+    };
 
     await axios.post("http://192.168.13.75:3001/insert", value3)
       .then((response) => {
@@ -58,13 +59,17 @@ function Chat() {
     return () => clearInterval(interval); // Cleanup the interval on component unmount
   }, [images.length]);
 
+  const { t } = useTranslation();
+  const { ques1, ques2, ques3, ques4
+  } = t('chatsec', { returnObjects: true });
+
   return (
     <div ref={chatBotRef} className="chat-container" style={{ '--floating-button-image': `url(${images[currentImageIndex]})` }}>
       <ChatBot
         steps={[
           {
             id: '1',
-            message: 'Hi! I am here to help you. Can I know your name?',
+            message: ques1,
             trigger: '2',
           },
           {
@@ -74,7 +79,7 @@ function Chat() {
           },
           {
             id: '3',
-            message: 'Hi {previousValue}, How Can I help you?',
+            message: ques2,
             trigger: '4',
           },
           {
@@ -84,7 +89,7 @@ function Chat() {
           },
           {
             id: '5',
-            message: 'Sure. Can I have your phone number?',
+            message: ques3,
             trigger: '6',
           },
           {
@@ -94,7 +99,7 @@ function Chat() {
           },
           {
             id: '7',
-            message: 'Thank you! One of our staff will call you shortly.',
+            message: ques4,
             end: true,
           },
         ]}

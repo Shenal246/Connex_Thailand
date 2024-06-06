@@ -18,6 +18,7 @@ import Infrastructure from '../Solutions/solutionVendors/Infrastructure/Infrastr
 import Server from '../Solutions/solutionVendors/ServerBackup/ServerBackup';
 import Portal from '../Portal/Portal';
 import Blog from '../Blog/Blog';
+import { useTranslation } from 'react-i18next';
 
 import sin from '../../images/FlagIcon/singapore.png';
 import aus from '../../images/FlagIcon/australia.png';
@@ -109,6 +110,11 @@ function Navbar() {
     };
   }, []); // empty dependency array ensures that this effect runs only once on component mount
 
+  const { t } = useTranslation();
+  const { tab1, tab2, tab3, tab4,tab5,tab6,tab7,tab8,tab9
+  } = t('navsec', { returnObjects: true });
+
+
   return (
     <>
       <Router>
@@ -119,33 +125,33 @@ function Navbar() {
             </a>
             <nav id="navmenu" className="navmenu">
               <ul class="no-bullets">
-                <NavLink to="/About" activeClassName='active-link' exact><li><a className="">About Us</a></li></NavLink>
+                <NavLink to="/About" activeClassName='active-link' exact><li><a className="">{tab1}</a></li></NavLink>
                 {/* <NavLink to="/Products" activeClassName='active-link' exact><li><a className="">Products</a></li></NavLink> */}
-                <NavLink to="/Solutions" activeClassName='active-link' exact><li><a className="">Solutions</a></li></NavLink>
+                <NavLink to="/Solutions" activeClassName='active-link' exact><li><a className="">{tab2}</a></li></NavLink>
 
 
                 <li className="dropdown countries"><a href="#" className='toggle-dropdown'>
-                  <span className='toggle-dropdown'>Events&nbsp; </span> <i className="bi bi-chevron-down toggle-dropdown arrow1 " ></i></a>
+                  <span className='toggle-dropdown'>{tab3}&nbsp; </span> <i className="bi bi-chevron-down toggle-dropdown arrow1 " ></i></a>
                   <ul className=''>
                     <div >
                       <NavLink to="/Events&News" activeClassName='active-link' exact>
-                        <a>Events & News</a>
+                        <a>{tab4}</a>
                       </NavLink>
                       <NavLink to="/UpcomingNews" activeClassName='active-link' exact>
-                        <a>Upcoming News</a>
+                        <a>{tab5}</a>
                       </NavLink>
                       <NavLink to="/Blog" activeClassName='active-link' exact>
-                        <a>Blogs</a>
+                        <a>{tab6}</a>
                       </NavLink>
 
                     </div>
                   </ul>
                 </li>
 
-                <NavLink to="/Portal" activeClassName='active-link' exact><li><a className="">Portal</a></li></NavLink>
+                <NavLink to="/Portal" activeClassName='active-link' exact><li><a className="">{tab7}</a></li></NavLink>
 
                 <li className="dropdown countries"><a href="#" className='toggle-dropdown'>
-                  <span className='toggle-dropdown'>Country&nbsp;<img src={tld} alt=" Flag" className='flag flagNavbar' /> </span> <i className="bi bi-chevron-down toggle-dropdown arrow " ></i></a>
+                  <span className='toggle-dropdown'>{tab8}&nbsp;<img src={tld} alt=" Flag" className='flag flagNavbar' /> </span> <i className="bi bi-chevron-down toggle-dropdown arrow " ></i></a>
                   <ul className='container1'>
                     <div class="scrollable-menu flagName">
                       
@@ -170,7 +176,7 @@ function Navbar() {
               <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
 
-            <NavLink to="/ContactUs" activeClassName='active-link' className="btn-getstarted" >Contact Us</NavLink>
+            <NavLink to="/ContactUs" activeClassName='active-link' className="btn-getstarted" >{tab9}</NavLink>
             <LanguageSelector/>
 
           </div>
