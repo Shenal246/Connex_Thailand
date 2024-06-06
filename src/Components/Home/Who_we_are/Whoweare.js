@@ -35,7 +35,7 @@ function WhoweareSection() {
   const { t } = useTranslation();
 
   const [counterOn, setCounterOn] = useState(false);
-  const { whotopic, card1, card2, card3, card4, rText1, rText2, ic1, ic2, ic3, ic4 } = t('whowearesec', { returnObjects: true });
+  const { whotopic, card1, card1Text, card2, card2Text, card3, card3Text, card4, card4Text, rText1, rText2, ic1, ic2, ic3, ic4, contact } = t('whowearesec', { returnObjects: true });
 
 
   return (
@@ -78,8 +78,8 @@ function WhoweareSection() {
               <div className="col-md-6 d-flex flex-column justify-content-center textarea" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
 
                 <div className="row" id='whText'>
-                  <h3 className='h3'>{rText1}</h3>
-                  <p >{rText2}</p>
+                  <p className='tx1'>{rText1}</p>
+                  <p className='tx2p'>{rText2}</p>
                 </div>
 
 
@@ -151,13 +151,13 @@ function WhoweareSection() {
       >
         <Modal.Header closeButton closeVariant='white' className='model-header'>
           <Modal.Title id="example-modal-sizes-title-lg">
-            Distribution
+            {card1}
           </Modal.Title>
         </Modal.Header>
         <Modal.Body className='model-body'>
           <div className='row'>
             <div className='col-md'>
-              <p className='model-content-text'>Discover our tailor-made solutions, designed to meet end-users requirements with the most competitive, best-fitted answers for their unique needs.</p>
+              <p className='model-content-text'>{card1Text}</p>
             </div>
 
             <div className='col-md'>
@@ -167,7 +167,7 @@ function WhoweareSection() {
         </Modal.Body>
         <Modal.Footer className='model-footer'>
           <NavLink to="/ContactUs"><Button onClick={handleClose} className='contactUs-button'>
-            Contact Us
+            {contact}
           </Button></NavLink>
         </Modal.Footer>
       </Modal>
@@ -188,8 +188,7 @@ function WhoweareSection() {
         <Modal.Body className='model-body'>
           <div className='row'>
             <div className='col-md'>
-              <p className='model-content-text'>Consultancy service is a unique solution offered by Connex, ensuring the most suitable and competitive solution for an end-user’s requirements. We offer an integrated customized service of consultancy skills that grows and changes with business and customer needs.
-                Connex consultancy provides highly qualified personnel to complement the skills of your own team. Our consultants and engineers act on your behalf to ensure the smooth running of customers’ installation, in a timely manner and according to budget implications.</p>
+              <p className='model-content-text'>{card2Text}</p>
             </div>
 
             <div className='col-md'>
@@ -199,7 +198,7 @@ function WhoweareSection() {
         </Modal.Body>
         <Modal.Footer className='model-footer'>
           <NavLink to="/ContactUs"><Button onClick={handleClose} className='contactUs-button'>
-            Contact Us
+            {contact}
           </Button></NavLink>
         </Modal.Footer>
       </Modal>
@@ -221,11 +220,7 @@ function WhoweareSection() {
           <div className='row'>
             <div className='col-md'>
               <p className='model-content-text'>
-                We believe in the popular adage we are all lifelong learners, hence we strive to create a culture of learning where our employees are afforded numerous opportunities to further their professional development. We also groom our employees for future leadership positions from within the Company.
-                <br />
-                In a fast moving and developing digital world, the Technology industry experiences changes rapidly; therefore we realize the need to keep pace with attrition rates and staying on the edge of the most advanced technologies. Our extensive training and professional development of programmers have contributed to employee retention.
-                <br />
-                Our training and workshop facility enables us to conduct knowledge of product technology awareness sessions, assist with vendors workshops & award certifications.
+                {card3Text}
               </p>
             </div>
 
@@ -236,7 +231,7 @@ function WhoweareSection() {
         </Modal.Body>
         <Modal.Footer className='model-footer'>
           <NavLink to="/ContactUs"><Button onClick={handleClose} className='contactUs-button'>
-            Contact Us
+            {contact}
           </Button></NavLink>
         </Modal.Footer>
       </Modal>
@@ -258,9 +253,7 @@ function WhoweareSection() {
           <div className='row'>
             <div className='col-md'>
               <p className='model-content-text'>
-                Connex offers 24/7 TAC services, with an array of certified, technical and qualified professionals. We are proud of Service Level Agreement levels of Bronze, Silver, Gold and Platinum.<br />
-                You will get to engage with your Product Manager who will share his understanding of the product, so you are fully informed and equipped with knowledge and the technical know how to use the product. Product research updates will also be shared along with information about deal registration.<br />
-                Connex professional service and technical support service are available for our channel partners only. Please contact.
+                {card4Text}
               </p>
             </div>
 
@@ -271,7 +264,7 @@ function WhoweareSection() {
         </Modal.Body>
         <Modal.Footer className='model-footer'>
           <NavLink to="/ContactUs"><Button onClick={handleClose} className='contactUs-button'>
-            Contact Us
+            {contact}
           </Button></NavLink>
         </Modal.Footer>
       </Modal>

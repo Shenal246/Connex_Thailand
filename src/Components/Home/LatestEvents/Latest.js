@@ -4,8 +4,8 @@ import Card from 'react-bootstrap/Card';
 import { BsArrowRight } from 'react-icons/bs';
 import axios from "axios";
 import { NavLink } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
-import Latest1 from '../../../images/Latest/1.png';
 import { useState, useEffect, useRef } from 'react';
 import connections from '../../../config';
 
@@ -85,12 +85,15 @@ const Latest = () => {
         fetchNews();
     }, []);
 
+    const { t } = useTranslation();
+  const { lattopic } = t('latestsec', { returnObjects: true });
+
     return (
         <section >
             <div className='container latest'>
                 <div className="row gy-3 headingRow" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
                     <div className="col-4"><hr /></div>
-                    <div className="col-4"><p id='whoweareText'>Latest News</p></div>
+                    <div className="col-4"><p id='whoweareText'>{lattopic}</p></div>
                     <div className="col-4"><hr /></div>
                 </div>
 

@@ -31,7 +31,7 @@ const imagePaths = [ven1, ven2, ven3, ven4, ven5, ven6, ven7, ven8, ven9, ven10,
 
 const Vendors = () => {
   const { t } = useTranslation();
-const { ventopic, venText1, venText2 } = t('vendorsec', { returnObjects: true });
+  const { ventopic, venText1, venText2 } = t('vendorsec', { returnObjects: true });
 
   return (
     <section className='vendors'>
@@ -44,7 +44,7 @@ const { ventopic, venText1, venText2 } = t('vendorsec', { returnObjects: true })
         </div>
 
         <div className='row vendorText' data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
-          <p>Embark on technological Excellence with our Trusted <br />Network of Vendors.</p>
+          <p>{venText1}<br />{venText2}</p>
         </div>
 
         <div className='row' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">

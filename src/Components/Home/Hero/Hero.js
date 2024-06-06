@@ -34,8 +34,7 @@ function HeroSection() {
 
   const { t } = useTranslation();
 
-  const { greet1, greet2first,greet2mid,greet2last,greet3,contact,wtvideo } = t('herosect', { returnObjects: true });
-  const { line1, line2 } = t('description', { returnObjects: true });
+  const { greet1, greet2first, greet2mid, greet2last, greet3, contact, wtvideo } = t('herosect', { returnObjects: true });
 
   return (
     <section id="hero" className="section hero">
@@ -72,14 +71,14 @@ function HeroSection() {
               <button type="button" className="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body">
-              <iframe 
-                className='video' 
-                src="https://www.youtube.com/embed/FCe1vPuB954?si=5cqHj3a1AtVZqFcN" 
-                title="YouTube video player" 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerPolicy="strict-origin-when-cross-origin" 
-                allowFullScreen 
+              <iframe
+                className='video'
+                src="https://www.youtube.com/embed/FCe1vPuB954?si=5cqHj3a1AtVZqFcN"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
                 ref={iframeRef}
               ></iframe>
             </div>
