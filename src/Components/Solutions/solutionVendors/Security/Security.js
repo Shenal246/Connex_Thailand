@@ -18,7 +18,7 @@ function Security() {
 
     useEffect(() => {
         const values = {
-            query: "SELECT name,des,wlink,status,image_data,cnt,Security_Management FROM Vendor WHERE Security_Management='true' AND status=1 AND cnt=1;",
+            query: "SELECT name,des,wlink,status,image_data,cnt,Security_Management FROM Vendor WHERE Security_Management='true' AND status=1 AND cnt=2;",
             key: "Cr6re8VRBm"
         };
 
