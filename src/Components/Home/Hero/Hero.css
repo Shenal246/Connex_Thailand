@@ -12,6 +12,9 @@
     align-items: center;
     border-bottom: 2px solid rgba(var(--accent-color-rgb), 0.25);
 }
+.heroimg{
+    width: 600px !important; 
+}
 
 h3{
     color: white !important;

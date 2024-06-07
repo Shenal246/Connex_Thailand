@@ -1,5 +1,5 @@
 import './Hero.css';
-import Logo from '../../../images/hero.png';
+import Logo from '../../../images/ThailandIT.png';
 import React, { useRef, useEffect } from 'react';
 import { NavLink } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
@@ -49,16 +49,16 @@ function HeroSection() {
               <div className="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
                 <div className="d-flex">
                   <NavLink to="/ContactUs" className="btn-get-started">{contact}</NavLink>
-                  <a href="#" className="glightbox btn-watch-video d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#videoModal" onClick={handlePlayVideo}>
+                  {/* <a href="#" className="glightbox btn-watch-video d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#videoModal" onClick={handlePlayVideo}>
                     <i className="bi bi-play-circle"></i>
                     <span>{wtvideo}</span>
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>
           </div>
           <div className="col-lg-4 order-1 order-lg-2 hero-img" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
-            <img src={Logo} className="img-fluid animated heroimg" style={{ width: '100%' }} alt="Hero" />
+            <img src={Logo} className="img-fluid  heroimg"  alt="Hero" />
           </div>
           <div className="col-lg-6 order-1 order-lg-2 space"></div>
         </div>
