@@ -4,6 +4,7 @@ import axios from 'axios';
 import ReCAPTCHA from 'react-google-recaptcha';
 import './Contact.css';
 import mapSL from '../../images/map/mapSL.png';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
@@ -30,6 +31,10 @@ const Contact = () => {
         setIsHuman(!!value);
     };
 
+    // const { footHeadTopic, headLine1, headLine2, headLine3,headLine4, footConTopic, conLine1,
+    //     conLine2, conLine3, conLine4, conLine5, resTopic, res1, res2, res3
+    //     } = t('contsec: {', { returnObjects: true });
+        
     return (
         <div className="container">
             <div className='row'>

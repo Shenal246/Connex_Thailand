@@ -123,6 +123,19 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     tab8: "Country",
                     tab9: "Contact Us",
                 },
+
+                //contactus page
+                // contsec: {
+                //     tab1: "About Us",
+                //     tab2: "Solutions",
+                //     tab3: "Events",
+                //     tab4: "Events & News",
+                //     tab5: "Upcoming News",
+                //     tab6: "Blogs",
+                //     tab7: "Potal",
+                //     tab8: "Country",
+                //     tab9: "Contact Us",
+                // },
             },
         },
         fr: {
