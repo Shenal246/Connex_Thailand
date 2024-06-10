@@ -124,18 +124,38 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     tab9: "Contact Us",
                 },
 
-                //contactus page
-                // contsec: {
-                //     tab1: "About Us",
-                //     tab2: "Solutions",
-                //     tab3: "Events",
-                //     tab4: "Events & News",
-                //     tab5: "Upcoming News",
-                //     tab6: "Blogs",
-                //     tab7: "Potal",
-                //     tab8: "Country",
-                //     tab9: "Contact Us",
-                // },
+                // contactus page
+                contsec: {
+                    cont1: "Contact Us",
+                    cont2: "Reach out to us ",
+                    cont3: "to let us know how we can assist you.",
+                    cont4: "We are happy to provide",
+                    cont5: "customer support or",
+                    cont6: "answer any general inquiries",
+                    cont7: " you may have.",
+                    cont8: "First name",
+                    cont9: "First name is required",
+                    cont10: "Last name",
+                    cont11: "Last name is required",
+                    cont12: "Company",
+                    cont13: "Company is required",
+                    cont14: "Contact Number",
+                    cont15: "Contact number must be exactly 10 digits",
+                    cont16: "name@example.com",
+                    cont17: "Invalid email address",
+                    cont18: "Comments are required",
+                    cont19: "I accept the privacy & policy",
+                    cont20: "You must accept the privacy & policy",
+                    cont21: "Submit",
+                    cont22: "Clear",
+                    cont23: "Sri Lanka",
+                    cont24: "Sri Lankan Office",
+                    cont25: "No 286,",
+                    cont26: "R. A. De Mel Mawatha,",
+                    cont27: "Colombo 00300,",
+                    cont28: "Sri Lanka",
+                    cont29: "",
+                },
             },
         },
         fr: {
@@ -149,6 +169,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     contact: "ติดต่อเรา",
                     wtvideo: "ดูวีดีโอ",
                 },
+               
                 
             },
         }
