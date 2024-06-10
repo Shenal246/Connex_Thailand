@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import ReCAPTCHA from 'react-google-recaptcha';
 import './Contact.css';
-import mapSL from '../../images/map/mapSL.png';
+import mapThl from '../../images/map/thailand.png';
 import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
@@ -35,7 +35,7 @@ const Contact = () => {
     const { cont1, cont2, cont3, cont4, cont5, cont6, cont7,
         cont8, cont9, cont10 , cont11, cont12, cont13, cont14, cont15, cont16,
         cont17, cont18, cont19, cont20, cont21, cont22, cont23, cont24, cont25,
-        cont26, cont27, cont28, cont29
+        cont26, cont27, cont28, cont29, cont30
         } = t('contsec', { returnObjects: true });
         
     return (
@@ -60,7 +60,7 @@ const Contact = () => {
                                     <input
                                         type="text"
                                         className={`form-control ${errors.firstName ? 'is-invalid' : ''}`}
-                                        placeholder="First name"
+                                        placeholder={cont8}
                                         aria-label={cont8}
                                         {...register('firstName', { required: true })}
                                     />
@@ -70,7 +70,7 @@ const Contact = () => {
                                     <input
                                         type="text"
                                         className={`form-control ${errors.lastName ? 'is-invalid' : ''}`}
-                                        placeholder="Last name"
+                                        placeholder={cont10}
                                         aria-label={cont10}
                                         {...register('lastName', { required: true })}
                                     />
@@ -82,7 +82,7 @@ const Contact = () => {
                                     <input
                                         type="text"
                                         className={`form-control ${errors.Company ? 'is-invalid' : ''}`}
-                                        placeholder="Company"
+                                        placeholder={cont12}
                                         aria-label={cont12}
                                         {...register('Company', { required: true })}
                                     />
@@ -92,7 +92,7 @@ const Contact = () => {
                                     <input
                                         type="text"
                                         className={`form-control ${errors.contactNumber ? 'is-invalid' : ''}`}
-                                        placeholder="Contact Number"
+                                        placeholder={cont14}
                                         aria-label={cont14}
                                         {...register('contactNumber', {
                                             required: true,
@@ -130,7 +130,7 @@ const Contact = () => {
                         <div className="col-md">
                             <textarea
                                 className={`form-control txtarea ${errors.comments ? 'is-invalid' : ''}`}
-                                placeholder="Leave a comment here"
+                                placeholder={cont30}
                                 id="floatingTextarea2"
                                 {...register('comments', { required: true })}
                             ></textarea>
@@ -188,7 +188,7 @@ const Contact = () => {
                     <hr className='line'></hr><hr className='line'></hr>
                 </div>
                 <div className="col-md-6">
-                <img src={mapSL } className='mapSL' />
+                <img src={mapThl } className='mapThl' />
 
                 </div>
             </div>

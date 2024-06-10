@@ -12,7 +12,7 @@ import { useTranslation } from 'react-i18next';
 
 function Solutions() {
   const { t } = useTranslation();
-  const { periTopic, cyberTopic, authTopic, secTopic, endTopic, netTopic, dataTopic, serverTopic } = t('solutionssec', { returnObjects: true });
+  const { maintopic, periTopic, cyberTopic, authTopic, secTopic, endTopic, netTopic, dataTopic, serverTopic } = t('solutionssec', { returnObjects: true });
 
 
   return (
@@ -21,7 +21,7 @@ function Solutions() {
         <div className='row'>
           <div className="row text">
             <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
-            <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='topic'>Solutions</p></div>
+            <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{maintopic}</p></div>
             <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
           </div>
         </div>

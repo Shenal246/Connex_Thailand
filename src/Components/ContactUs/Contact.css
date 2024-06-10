@@ -170,9 +170,11 @@
     margin-top: 0.25em;
 }
 
-.mapSL{
-    width: 230px;
+.mapThl{
+    width: 200px;
     margin-left: 100px;
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
 }
 .line{
     display: none;
