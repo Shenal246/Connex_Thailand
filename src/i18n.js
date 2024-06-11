@@ -173,6 +173,9 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 portalsec:{
                     ptl1: "To be launch",
                     ptl2: "Soon"
+                },
+                blogsec: {
+                    blg1: "Blogs"
                 }
             },
         },
@@ -334,6 +337,9 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 portalsec: {
                     ptl1: "เตรียมเปิดตัว",
                     ptl2: "เร็วๆ นี้"
+                },
+                blogsec: {
+                    blg1: "บล็อก"
                 }
                 
 
