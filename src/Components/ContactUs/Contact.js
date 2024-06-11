@@ -181,7 +181,7 @@ const Contact = () => {
                     </p>
                     <button 
                         className="neon-button" 
-                        onClick={() => window.open('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.8378227416442!2d79.84946567448274!3d6.909986818552493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25965c4fa5a01%3A0x2773f36f89729e4e!2sConnex%20Information%20Technologies%20(Pvt)%20Ltd.!5e0!3m2!1sen!2slk!4v1715597396485!5m2!1sen!2slk')}
+                        onClick={() => window.open('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.0918992814586!2d100.57137787589524!3d13.773331296793016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29f1e570cdf27%3A0xa3b67073f54a5f10!2sPNP%20International%20Legal%20Co.%2C%20Ltd.!5e0!3m2!1sen!2slk!4v1718093144399!5m2!1sen!2slk')}
                     >
                         {cont29}
                     </button>
