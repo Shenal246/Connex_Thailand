@@ -40,7 +40,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     ventopic: "Our Vendors",
                     venText1: "Embark on technological Excellence with our Trusted ",
                     venText2: "Network of Vendors.",
-                    
+
                 },
                 latestsec: {
                     lattopic: "Latest News",
@@ -77,6 +77,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 },
                 // Sollutions section
                 solutionssec: {
+                    maintopic: "Solutions",
                     periTopic: "Perimeter and  Internal Security",
                     cyberTopic: "Cyber Security Governance & Compliance",
                     authTopic: "Authentication & Identity Management",
@@ -126,37 +127,37 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
 
                 // contactus page
                 contsec: {
-                    cont1: "ติดต่อเรา",
-                    cont2: "ติดต่อเรา",
-                    cont3: "เพื่อให้เรารู้ว่าเราสามารถช่วยเหลือคุณได้อย่างไร",
-                    cont4: "เรายินดีที่จะให้",
-                    cont5: "การสนับสนุนลูกค้าหรือ",
-                    cont6: "ตอบคำถามทั่วไป",
-                    cont7: " ที่คุณอาจมี",
-                    cont8: "ชื่อ",
-                    cont9: "ต้องการชื่อ",
-                    cont10: "นามสกุล",
-                    cont11: "ต้องการนามสกุล",
-                    cont12: "บริษัท",
-                    cont13: "ต้องการบริษัท",
-                    cont14: "เบอร์ติดต่อ",
-                    cont15: "เบอร์ติดต่อต้องมี 10 หลัก",
+                    cont1: "Contact Us",
+                    cont2: "Reach out to us ",
+                    cont3: "to let us know how we can assist you.",
+                    cont4: "We are happy to provide",
+                    cont5: "customer support or",
+                    cont6: "answer any general inquiries",
+                    cont7: " you may have.",
+                    cont8: "First name",
+                    cont9: "First name is required",
+                    cont10: "Last name",
+                    cont11: "Last name is required",
+                    cont12: "Company",
+                    cont13: "Company is required",
+                    cont14: "Contact Number",
+                    cont15: "Contact number must be exactly 10 digits",
                     cont16: "name@example.com",
-                    cont17: "ที่อยู่อีเมลไม่ถูกต้อง",
-                    cont18: "ต้องการความคิดเห็น",
-                    cont19: "ฉันยอมรับนโยบายความเป็นส่วนตัวและนโยบาย",
-                    cont20: "คุณต้องยอมรับนโยบายความเป็นส่วนตัวและนโยบาย",
-                    cont21: "ส่ง",
-                    cont22: "ล้าง",
-                    cont23: "ประเทศไทย",
-                    cont24: "สำนักงานในประเทศไทย",
-                    cont25: "184/75,",
-                    cont26: "ชั้น 17, อาคาร Forum,",
-                    cont27: "ถนนรัชดาภิเษก, แขวงห้วยขวาง, เขตห้วยขวาง,",
-                    cont28: "กรุงเทพฯ 10310, ประเทศไทย",
-                    cont29: "รับคำแนะนำเส้นทาง",
+                    cont17: "Invalid email address",
+                    cont18: "Comments are required",
+                    cont19: "I accept the privacy & policy",
+                    cont20: "You must accept the privacy & policy",
+                    cont21: "Submit",
+                    cont22: "Clear",
+                    cont23: "Thailand",
+                    cont24: "Thailand Office",
+                    cont25: "184/75, 17th Floor",
+                    cont26: "Forum Tower, Ratchadapkisek Rd,",
+                    cont27: "Khwaeng Huai Khwang, Hui Khwang,",
+                    cont28: "Bangkok 10310, Thailand",
+                    cont29: "Get Directions",
                 },
-                
+
                 eventsec: {
                     evnt1: "Events & News",
                     evnt2: "Latest Events and News",
@@ -171,7 +172,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     upevnt3: "No Image Available",
                     upevnt4: "Close",
                 },
-                portalsec:{
+                portalsec: {
                     ptl1: "To be launch",
                     ptl2: "Soon"
                 },
@@ -244,7 +245,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     romeshText: `"ความสำเร็จในการขายไม่ใช่เรื่องของการผลักดันผลิตภัณฑ์ แต่เป็นเรื่องของการเข้าใจและแก้ปัญหาความต้องการของลูกค้า"`,
                 },
                 solutionssec: {
-                    maintopic:"โซลูชั่น",
+                    maintopic: "โซลูชั่น",
                     periTopic: "การรักษาความปลอดภัยภายนอกและภายใน",
                     cyberTopic: "การกำกับดูแลและการปฏิบัติตามความปลอดภัยทางไซเบอร์",
                     authTopic: "การพิสูจน์ตัวตนและการจัดการข้อมูลประจำตัว",
@@ -311,15 +312,15 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     cont20: "คุณต้องยอมรับนโยบายความเป็นส่วนตัว",
                     cont21: "ส่ง",
                     cont22: "ล้าง",
-                    cont23: "ศรีลังกา",
-                    cont24: "สำนักงานศรีลังกา",
-                    cont25: "เลขที่ 286,",
-                    cont26: "ถนนอาร์. เอ. เดอ เมล,",
-                    cont27: "โคลัมโบ 00300,",
-                    cont28: "ศรีลังกา",
+                    cont23: "ประเทศไทย",
+                    cont24: "สำนักงานประเทศไทย",
+                    cont25: "184/75 ชั้น 17",
+                    cont26: "อาคารฟอรั่ม ถนนรัชดาภิเษก",
+                    cont27: "แขวงห้วยขวาง เขตห้วยขวาง",
+                    cont28: "กรุงเทพฯ 10310 ประเทศไทย",
                     cont29: "ขอเส้นทาง",
                 },
-                
+
                 eventsec: {
                     evnt1: "กิจกรรมและข่าวสาร",
                     evnt2: "กิจกรรมและข่าวสารล่าสุด",
@@ -334,7 +335,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     upevnt3: "ไม่มีภาพที่ใช้ได้",
                     upevnt4: "ปิด",
                 },
-                
+
                 portalsec: {
                     ptl1: "เตรียมเปิดตัว",
                     ptl2: "เร็วๆ นี้"
@@ -342,9 +343,9 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 blogsec: {
                     blg1: "บล็อก"
                 }
-                
 
-                
+
+
             },
         }
     }
