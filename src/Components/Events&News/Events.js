@@ -58,7 +58,7 @@ const Events = () => {
 
 
     return (
-        <div className="evntainer">
+        <div className="container">
             <div className='row'>
                 <div className="row text">
                     <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
