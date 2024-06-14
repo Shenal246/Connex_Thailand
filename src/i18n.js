@@ -178,6 +178,32 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 },
                 blogsec: {
                     blg1: "Blogs"
+                },
+                authentisec:{
+                    at1: "Authentication & Identity Management",
+                    at2: "No Image Available",                  
+                },
+                cybersec:{
+                    cy1: "Cyber Security Governance & Compliance",
+                    cy2: "No Image Available"
+                },endpsec:{
+                    ep1: "Endpoint Security",
+                    ep2: "No Image Available"
+                },newtworksec: {
+                    nt1: "Networking",
+                    nt2: "No Image Available"
+                },ifmsec: {
+                    if1: "Data Center Infrastructure and Infrastructure Monitoring",
+                    if2: "No Image Available"
+                },perisec: {
+                    pr1:"Perimeter And Internal Security",
+                    pr2:"No Image Available"
+                },securitysec: {
+                    scrty1: "Security Management",
+                    scrty2: "No Image Available"
+                },serversec: {
+                    svr1: "Server Storage & Backup Solutions",
+                    svr2: "No Image Available"
                 }
             },
         },
@@ -342,10 +368,37 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 },
                 blogsec: {
                     blg1: "บล็อก"
+                },
+                authentisec:{
+                    at1: "การยืนยันตัวตนและการจัดการข้อมูลประจำตัว",
+                    at2: "ไม่มีภาพที่แสดง",
+                },
+                cybersec: {
+                    cy1: "การกำกับดูแลและการปฏิบัติตามความปลอดภัยทางไซเบอร์",
+                    cy2: "ไม่มีภาพที่แสดง"
+                },
+                endpsec: {
+                    ep1: "ความปลอดภัยของปลายทาง",
+                    ep2: "ไม่มีภาพที่แสดง"
+                },newtworksec: {
+                    nt1: "เครือข่าย",
+                    nt2: "ไม่มีภาพที่แสดง"
+                },ifmsec: {
+                    if1: "โครงสร้างพื้นฐานของศูนย์ข้อมูลและการตรวจสอบโครงสร้างพื้นฐาน",
+                    if2: "ไม่มีภาพที่แสดง"
+                },perisec: {
+                    pr1: "ความปลอดภัยรอบขอบเขตและภายใน",
+                    pr2: "ไม่มีภาพที่แสดง"
+                },securitysec: {
+                    scrty1: "การจัดการความปลอดภัย",
+                    scrty2: "ไม่มีภาพที่แสดง"
+                },serversec: {
+                    svr1: "โซลูชั่นการจัดเก็บและสำรองข้อมูลเซิร์ฟเวอร์",
+                    svr2: "ไม่มีภาพที่แสดง"
                 }
-
-
-
+                
+                               
+                
             },
         }
     }

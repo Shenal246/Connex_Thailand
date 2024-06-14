@@ -34,7 +34,7 @@ import mrt from '../../images/FlagIcon/mauritius.png';
 import sl from '../../images/FlagIcon/sri-lanka.png';
 import tnz from '../../images/FlagIcon/tanzania.png';
 import tld from '../../images/FlagIcon/thailand.png';
-
+import SingleVendor from '../SingleVendor/SingleVendor';
 import products from '../Products/products';
 import LanguageSelector from '../language-selector';
 
@@ -202,6 +202,14 @@ function Navbar() {
           <Route path="/Solutions/Networking" element={<Networking />} />
           <Route path="/Solutions/Infrastructure" element={<Infrastructure />} />
           <Route path="/Solutions/Server" element={<Server />} />
+          <Route path="/Solutions/Authentication/:vendorName" element={<SingleVendor />} />
+          <Route path="/Solutions/CyberSecurity/:vendorName" element={<SingleVendor />} />
+          <Route path="/Solutions/Endpoin/:vendorName" element={<SingleVendor />} />
+          <Route path="/Solutions/InfrastructureMonitoring/:vendorName" element={<SingleVendor />} />
+          <Route path="/Solutions/Networking/:vendorName" element={<SingleVendor />} />
+          <Route path="/Solutions/Perimia/:vendorName" element={<SingleVendor />} />
+          <Route path="/Solutions/Security/:vendorName" element={<SingleVendor />} />
+          <Route path="/Solutions/ServerBackup/:vendorName" element={<SingleVendor />} />
 
 
 
