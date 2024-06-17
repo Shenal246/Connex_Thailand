@@ -20,6 +20,22 @@
     font-size: 18px;
 }
 
+/* Media query for mobile views */
+@media (max-width: 768px) {
+    .websiteButton {
+        width: 45% !important; /* Increase the width for mobile view */
+    }
+
+    .imgbgrd{
+        width: 150px !important;
+    }
+
+    .vendorpic1{
+        width: 100%;
+    }
+    
+}
+
 .imgbgrd{
     background-color: aliceblue;
     border-radius: 5px;
