@@ -17,10 +17,12 @@ function Chat() {
     const tpno = values[2];
 
     const value3 = {
-      query: "INSERT INTO chat(name, problem, tpno) VALUES (?,?,?)",
+      query: "INSERT INTO chat(name, problem, tpno,countryid,statusid) VALUES (?,?,?,?,?)",
       value1: name,
       value2: problem,
       value3: tpno,
+      value4: 2,
+      value5: 1,
       key: "FKoaDwCi7C"
     };
 
