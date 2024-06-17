@@ -234,8 +234,7 @@ const Latest = () => {
                                 <div className="modal-body">
                                     {currentVideoLink && (
                                         <iframe
-                                            width="1100"
-                                            height="500"
+                                            className='iframenews'
                                             src={currentVideoLink && currentVideoLink}
                                             title="Video Player"
                                             frameBorder="0"

@@ -56,7 +56,7 @@ function Server() {
                     {vendors && vendors.map((vend, index) => (
                         <div className="col" key={index}>
 
-                            <div class="card h-100" onClick={() => { setShow(true); handleCardClick(vend); }}>
+                            <div class="card h-100" onClick={() => {  handleCardClick(vend); }}>
                                 {vend.image_data ? (
                                     <>
                                         <img
