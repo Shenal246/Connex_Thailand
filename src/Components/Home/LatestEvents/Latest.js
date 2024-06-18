@@ -86,7 +86,7 @@ const Latest = () => {
     }, []);
 
     const { t } = useTranslation();
-  const { lattopic } = t('latestsec', { returnObjects: true });
+    const { lattopic } = t('latestsec', { returnObjects: true });
 
     return (
         <section >
@@ -233,15 +233,17 @@ const Latest = () => {
                                 </div>
                                 <div className="modal-body">
                                     {currentVideoLink && (
-                                        <iframe
-                                            className='iframenews'
-                                            src={currentVideoLink && currentVideoLink}
-                                            title="Video Player"
-                                            frameBorder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            referrerPolicy="strict-origin-when-cross-origin"
-                                            allowFullScreen
-                                        ></iframe>
+                                        <div className="video-container">
+                                            <iframe
+                                                className='iframenews'
+                                                src={currentVideoLink}
+                                                title="Video Player"
+                                                frameBorder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                referrerPolicy="strict-origin-when-cross-origin"
+                                                allowFullScreen
+                                            ></iframe>
+                                        </div>
                                     )}
                                 </div>
                             </div>
