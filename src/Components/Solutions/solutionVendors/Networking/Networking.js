@@ -34,7 +34,7 @@ function Networking() {
     }, []);
 
     const handleCardClick = (vend) => {
-        navigate(`/Solutions/Networking/${vend.name}`, { state: { vend } });
+        navigate(`/TH/Solutions/Networking/${vend.name}`, { state: { vend } });
     };
 
     const { t } = useTranslation();
