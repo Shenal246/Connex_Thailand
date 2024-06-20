@@ -1,35 +1,58 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-import ReCAPTCHA from 'react-google-recaptcha';
 import './Contact.css';
 import mapThl from '../../images/map/thailand.png';
 import { useTranslation } from 'react-i18next';
+import Swal from 'sweetalert2'
 
 const Contact = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const formRef = useRef();
-    const [isHuman, setIsHuman] = useState(false);
-    const recaptchaRef = useRef();
 
     const onSubmit = async (data) => {
-        if (!isHuman) {
-            alert('Please verify that you are a human!');
-            return;
-        }
+        // if (!isHuman) {
+        //     alert('Please verify that you are a human!');
+        //     return;
+        // }
+
+        const values = [data.firstName, data.lastName, data.Company, data.contactNumber, data.email, data.comments];
+
+        const value33 = {
+            query: "INSERT INTO contactus(firstname, lastname, company, tpno,email,comment,countryid,statusid) VALUES (?,?,?,?,?,?,?,?)",
+            value1: values[0],
+            value2: values[1],
+            value3: values[2],
+            value4: values[3],
+            value5: values[4],
+            value6: values[5],
+            value7: 2,
+            value8: 1,
+            key: "FKoaDwCi7C"
+        };
+
+        console.log(value33);
 
         try {
-            const response = await axios.post('http://localhost:5000/send-email', data);
-            console.log(response.data);
-            reset();
+            const response = await axios.post("http://192.168.13.75:3001/insert", value33);
+            if (response.status === 200) {
+                Swal.fire({
+                    // position: "top-end",
+                    icon: "success",
+                    title: "Successfully Submitted",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                reset();
+            } else {
+                alert('Failed to submit the form.');
+            }
         } catch (error) {
-            console.error('Error sending email:', error);
+            console.error('Error submitting the form', error);
+            alert('An error occurred while submitting the form.');
         }
     };
 
-    const handleRecaptchaChange = (value) => {
-        setIsHuman(!!value);
-    };
 
     const { t } = useTranslation();
     const { cont1, cont2, cont3, cont4, cont5, cont6, cont7,
@@ -52,7 +75,7 @@ const Contact = () => {
                     <h1 className='h1'>{cont2}<br /> {cont3}</h1>
                     <h2 className='h2'>{cont4}<br /> {cont5} <br />{cont6} <br /> {cont7}</h2>
                 </div>
-                <div className="col-md inputField" data-aos="fade-down" dat a-aos-duration="1000" data-aos-delay="50">
+                <div className="col-md inputField" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
                     <form ref={formRef} onSubmit={handleSubmit(onSubmit)}>
                         <div className="form-floating col-md-mb-2">
                             <div className="row mt-4 mb-2">
@@ -98,10 +121,10 @@ const Contact = () => {
                                             required: true,
                                             pattern: {
                                                 value: /^[0-9]+$/,
-                                                message: {cont15},
+                                                message: cont15,
                                             },
                                             validate: {
-                                                length: (value) => value.length === 10 ||  {cont15},
+                                                length: (value) => value.length === 10 || cont15,
                                             },
                                         })}
                                     />
@@ -115,12 +138,12 @@ const Contact = () => {
                                 type="email"
                                 className={`form-control ${errors.email ? 'is-invalid' : ''}`}
                                 id="floatingInput"
-                                placeholder= {cont16}
+                                placeholder={cont16}
                                 {...register('email', {
                                     required: true,
                                     pattern: {
                                         value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-                                        message:  {cont17},
+                                        message: cont17,
                                     },
                                 })}
                             />
@@ -134,7 +157,7 @@ const Contact = () => {
                                 id="floatingTextarea2"
                                 {...register('comments', { required: true })}
                             ></textarea>
-                            {errors.comments && <span className="text-danger"> {cont18}</span>}
+                            {errors.comments && <span className="text-danger">{cont18}</span>}
                         </div>
 
                         <div className="form-check formcheck">
@@ -145,18 +168,11 @@ const Contact = () => {
                                 {...register('acceptTerms', { required: true })}
                             />
                             <label className="form-check-label tikBox" htmlFor="flexCheckDefault">
-                            {cont19}
+                                {cont19}
                             </label>
-                            {errors.acceptTerms && <span className="text-danger"> {cont20}</span>}
+                            {errors.acceptTerms && <span className="text-danger">{cont20}</span>}
                         </div>
 
-                        <div className="mt-3">
-                            <ReCAPTCHA
-                                ref={recaptchaRef}
-                                sitekey="YOUR_RECAPTCHA_SITE_KEY"
-                                onChange={handleRecaptchaChange}
-                            />
-                        </div>
                         <div className="row mt-4 btnContainer">
                             <div className="col-md-6 mb-2">
                                 <button type="submit" className="btn btn-success">{cont21}</button>
@@ -188,8 +204,7 @@ const Contact = () => {
                     <hr className='line'></hr><hr className='line'></hr>
                 </div>
                 <div className="col-md-6">
-                <img src={mapThl } className='mapThl' />
-
+                    <img src={mapThl} className='mapThl' />
                 </div>
             </div>
         </div>
