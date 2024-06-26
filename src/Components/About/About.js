@@ -71,7 +71,7 @@ const About = () => {
             name: rajivName,
             img: '/quots/Rajiv.jpg',
             quote: rajivText,
-            post: 'Director of Connex HQ',
+            post: 'Director',
         },
         {
             name: patricName,
@@ -89,13 +89,13 @@ const About = () => {
             name: jananiName,
             img: '/quots/Janani_Siriardhane.jpg',
             quote: jananiText,
-            post: 'Director of Connex HQ',
+            post: 'Director',
         },
         {
             name: romeshName,
             img: '/quots/romesh.jpg',
             quote: romeshText,
-            post: 'Director of Connex HQ',
+            post: 'Director',
         }
 
     ];
