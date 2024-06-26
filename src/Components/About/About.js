@@ -8,9 +8,6 @@ import Slider from "react-slick";
 import 'animate.css';
 import card1 from '../../images/map/map trans.png';
 import { useTranslation } from 'react-i18next';
-import ThaiNavbar from '../Navbar/Navbar';
-import ThaiChatbot from '../ChatBot/Chat';
-import ThaiFooter from '../Footer/Footer';
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -116,8 +113,7 @@ const About = () => {
 
     return (
         <>
-            <ThaiNavbar />
-            <ThaiChatbot />
+           
             <section id='t1'>
                 <div class="container classss">
                     <div className='center' data-aos="fade-up" data-aos-delay="200">
@@ -214,7 +210,7 @@ const About = () => {
                     <div className="col-2" ></div>
                 </div>
             </div>
-            <ThaiFooter />
+        
         </>);
 
 
