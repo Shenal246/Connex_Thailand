@@ -8,6 +8,9 @@ import { Row } from 'react-bootstrap';
 import connections from '../../../../config';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import ThaiNavbar from '../../../Navbar/Navbar';
+import ThaiChat from '../../../ChatBot/Chat';
+import ThaiFooter from '../../../Footer/Footer';
 
 function Perimia() {
     const [vendors, setVendors] = useState([]);
@@ -41,6 +44,9 @@ function Perimia() {
         } = t('perisec', { returnObjects: true });
 
     return (
+        <>
+        <ThaiNavbar/>
+        <ThaiChat/>
         <section>
             <div className="container">
                 <div className='row '>
@@ -105,6 +111,8 @@ function Perimia() {
                 </Modal>
             </div>
         </section>
+        <ThaiFooter />
+        </>
     );
 }
 

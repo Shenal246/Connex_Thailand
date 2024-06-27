@@ -1,6 +1,9 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import './SVendor.css';
+import ThaiNavbar from '../Navbar/Navbar';
+import ThaiChat from '../ChatBot/Chat';
+import ThaiFooter from '../Footer/Footer';
 
 const SingleVendor = () => {
     const location = useLocation();
@@ -8,6 +11,9 @@ const SingleVendor = () => {
     
 
     return (
+        <>
+        <ThaiNavbar/>
+        <ThaiChat/>
         <section>
             <div className="container sectionVendor">
                 <div className='row'>
@@ -39,6 +45,8 @@ const SingleVendor = () => {
                 </div>
             </div>
         </section>
+        <ThaiFooter/>
+        </>
     );
 };
 

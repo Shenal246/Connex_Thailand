@@ -5,6 +5,9 @@ import './Contact.css';
 import mapThl from '../../images/map/thailand.png';
 import { useTranslation } from 'react-i18next';
 import Swal from 'sweetalert2'
+import ThaiNavbar from '../Navbar/Navbar';
+import ThaiChat from '../Navbar/Navbar';
+import ThaiFooter from '../Footer/Footer';
 
 const Contact = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
@@ -62,6 +65,10 @@ const Contact = () => {
         } = t('contsec', { returnObjects: true });
         
     return (
+        <>
+        <ThaiNavbar/>
+        <ThaiChat/>
+        
         <div className="container">
             <div className='row'>
                 <div className="row gy-3 text mb-4" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
@@ -208,6 +215,9 @@ const Contact = () => {
                 </div>
             </div>
         </div>
+        
+        <ThaiFooter/>
+        </>
     );
 }
 

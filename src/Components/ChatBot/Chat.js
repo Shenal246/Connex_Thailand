@@ -5,6 +5,7 @@ import Botpic from '../../images/chatprof.png';
 import axios from "axios";
 import { useTranslation } from 'react-i18next';
 
+
 function Chat() {
   const [responses, setResponses] = useState([]);
   const chatBotRef = useRef(null);

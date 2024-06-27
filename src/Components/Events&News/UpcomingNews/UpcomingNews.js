@@ -4,6 +4,9 @@ import './UpcomingNews.css';
 import axios from "axios";
 import connections from '../../../config';
 import { useTranslation } from 'react-i18next';
+import ThaiNavbar from '../../Navbar/Navbar';
+import ThaiChat from '../../ChatBot/Chat';
+import ThaiFooter from '../../Footer/Footer';
 
 const UpcomingNews = () => {
     const videoRef = useRef(null); // Create a ref for the video element
@@ -44,6 +47,9 @@ const UpcomingNews = () => {
         } = t('upEventSec', { returnObjects: true });
 
     return (
+        <>
+        <ThaiNavbar/>
+           <ThaiChat/>
         <div className="upevntainer">
             <div className='row'>
                 <div className="row text">
@@ -110,6 +116,8 @@ const UpcomingNews = () => {
             </div>
 
         </div>
+        <ThaiFooter/>
+        </>
     );
 }
 

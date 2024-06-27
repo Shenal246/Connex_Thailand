@@ -4,6 +4,9 @@ import './Events.css';
 import axios from "axios";
 import connections from '../../config';
 import { useTranslation } from 'react-i18next';
+import ThaiNavbar from '../Navbar/Navbar';
+import ThaiChat from '../ChatBot/Chat';
+import ThaiFooter from '../Footer/Footer';
 
 const Events = () => {
     const videoRef = useRef(null);
@@ -58,6 +61,9 @@ const Events = () => {
 
 
     return (
+        <>
+        <ThaiNavbar/>
+        <ThaiChat/>
         <div className="container">
             <div className='row'>
                 <div className="row text">
@@ -192,6 +198,8 @@ const Events = () => {
                 </div>
             </div>
         </div>
+        <ThaiFooter/>
+        </>
     );
 }
 
